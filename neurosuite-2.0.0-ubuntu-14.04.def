@@ -9,7 +9,7 @@ From: ubuntu:14.04
 %post
  apt-get update
  apt-get -y install wget build-essential
- packages="libklustersshared_2.0.0 klusters_2.0.0 neuroscope_2.0.0 ndmanager_2.0.0"
+ packages="klusters_2.0.0 neuroscope_2.0.0 ndmanager_2.0.0"
  psuffix="-trusty_amd64.deb"
  for package in $packages;
  do
