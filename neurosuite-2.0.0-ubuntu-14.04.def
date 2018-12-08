@@ -14,7 +14,7 @@ From: ubuntu:14.04
  for package in $packages;
  do
     wget http://sourceforge.net/projects/neurosuite/files/ubuntu/${package}${psuffix}/download -O /tmp/${package}${psuffix}
-    sudo apt-get -y install /tmp/${package}${psuffix}
+    sudo apt-get -yf install /tmp/${package}${psuffix}
     rm /tmp/${package}${psuffix}
  done
 
