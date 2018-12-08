@@ -2,7 +2,7 @@ Bootstrap: docker
 From: ubuntu:16.04
 
 %labels
- Maintainer Ben Evans b.evans@yale.edu
+ Maintainer Peter Vincent peter.vincent@yale.edu
  Software Neurosuite
  Homepage http://neurosuite.sourceforge.net/
 
