@@ -16,6 +16,10 @@ From: ubuntu:14.04
  do
     wget http://sourceforge.net/projects/neurosuite/files/ubuntu/${package}${psuffix}/download -O /tmp/${package}${psuffix}
     gdebi /tmp/${package}${psuffix}
+    # rm /tmp/${package}${psuffix}
+ done
+ for package in $packages;
+ do
     rm /tmp/${package}${psuffix}
  done
 
