@@ -31,7 +31,7 @@ From: ubuntu:18.04
  tar xzf /tmp/${biosuiteCMD}
  apt-get -y install
  cp -r /tmp/bisweb-1.0.0-js-wasm-12_Dec_2018/bisweb /usr/local/bin/bisweb
- ./usr/local/bin/bisweb/setpaths.sh
+ 
  
  rm -r /tmp/${biosuiteCMD}
  rm -r /tmp/${biosuiteGUI}
@@ -40,3 +40,6 @@ From: ubuntu:18.04
  export NODEJS_HOME=/usr/local/lib/nodejs/node-$verion/bin
  export PATH=$NODEJS_HOME:$PATH
  . ~/.profile
+ 
+%runscript
+ ./usr/local/bin/bisweb/setpaths.sh
