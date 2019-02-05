@@ -21,7 +21,9 @@ From: ubuntu:18.04
  wget ${baseLoc}${biosuiteCMD} -O /tmp/${biosuiteCMD}
  wget ${baseLoc}${biosuiteGUI} -O /tmp/${biosuiteGUI}
  unzip /tmp/${biosuiteGUI}
+ apt-get -y install
  tar xzf /tmp/${biosuiteCMD}
+ apt-get -y install
  cp -r /tmp/bisweb-1.0.0-js-wasm-12_Dec_2018/bisweb /usr/local/bin/bisweb
  ./usr/local/bin/bisweb/setpaths.sh
  
