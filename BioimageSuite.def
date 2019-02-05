@@ -11,8 +11,8 @@ From: ubuntu:18.04
  apt-get update
  apt update
  apt-get -y install wget build-essential
- apt install nodejs
- apt install npm
+ apt -y install nodejs
+ apt -y install npm
  baseLoc="http://bisweb.yale.edu/binaries/"
  biosuiteCMD="bisweb-1.0.0-js-wasm-12_Dec_2018.tar.gz"
  biosuiteGUI="bisweb_linux_1.0.0_2018_12_12.zip"
