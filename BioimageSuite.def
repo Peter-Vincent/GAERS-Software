@@ -11,8 +11,14 @@ From: ubuntu:18.04
  apt-get update
  apt update
  apt-get -y install wget build-essential
- apt -y install nodejs
- apt -y install npm
+ nodeLoc="https://nodejs.org/download/release/v8.9.4/"
+ version=v8.9.4
+ distro=linux-x64
+ mkdir /usr/local/lib/nodejs
+ wget ${nodeLoc} -O /tmp/$node-$version-$distro.tar.gz
+ tar -xvzf /tmp/node-$version-$distro.tar.gz -C /usr/local/lib/nodejs
+ mv /usr/local/lib/nojs/node-$version-$distro /usr/local/lib/nodejs/node-$version
+ # apt -y install npm
  apt-get -y install unzip
  baseLoc="http://bisweb.yale.edu/binaries/"
  biosuiteCMD="bisweb-1.0.0-js-wasm-12_Dec_2018.tar.gz"
@@ -29,3 +35,8 @@ From: ubuntu:18.04
  
  rm -r /tmp/${biosuiteCMD}
  rm -r /tmp/${biosuiteGUI}
+
+%environment
+ export NODEJS_HOME=/usr/local/lib/nodejs/node-$verion/bin
+ export PATH=$NODEJS_HOME:$PATH
+ . ~/.profile
