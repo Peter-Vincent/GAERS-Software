@@ -1,0 +1,28 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%labels
+ Maintainer Peter Vincent peter.vincent@yale.edu
+ Software Biosuite
+ Homepage http://bisweb.yale.edu/binaries/binaries.html
+
+%post
+ cwd=$(pwd)
+ apt-get update
+ apt update
+ apt-get -y install wget build-essential
+ apt install nodejs
+ apt install npm
+ baseLoc="http://bisweb.yale.edu/binaries/"
+ biosuiteCMD="bisweb-1.0.0-js-wasm-12_Dec_2018.tar.gz"
+ biosuiteGUI="bisweb_linux_1.0.0_2018_12_12.zip"
+ 
+ wget ${baseLoc}${biosuiteCMD} -O /tmp/${biosuiteCMD}
+ wget ${baseLoc}${biosuiteGUI} -O /tmp/${biosuiteGUI}
+ unzip /tmp/${biosuiteGUI}
+ tar xzf /tmp/${biosuiteCMD}
+ cp /tmp/bisweb-1.0.0-js-wasm-12_Dec_2018/bisweb /usr/local/bin/bisweb
+ source /usr/local/bin/bisweb/setpaths.sh
+ 
+ rm -r /tmp/${biosuiteCMD}
+ rm -r /tmp/${biosuiteGUI}
