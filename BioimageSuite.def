@@ -22,7 +22,7 @@ From: ubuntu:18.04
  wget ${baseLoc}${biosuiteGUI} -O /tmp/${biosuiteGUI}
  unzip /tmp/${biosuiteGUI}
  tar xzf /tmp/${biosuiteCMD}
- cp /tmp/bisweb-1.0.0-js-wasm-12_Dec_2018/bisweb /usr/local/bin/bisweb
+ cp -r /tmp/bisweb-1.0.0-js-wasm-12_Dec_2018/bisweb /usr/local/bin/bisweb
  source /usr/local/bin/bisweb/setpaths.sh
  
  rm -r /tmp/${biosuiteCMD}
