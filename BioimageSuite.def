@@ -37,14 +37,9 @@ From: ubuntu:18.04
  rm -r /tmp/${biosuiteCMD}
  rm -r /tmp/${biosuiteGUI}
  rm -r /tmp/node-$version-$distro.tar.gz
-
-#%environment
-# export NODEJS_HOME=/usr/local/lib/nodejs/node-$version/bin
-# export PATH=$NODEJS_HOME:$PATH
  
+ wget https://raw.githubusercontent.com/PeterVincent96/GAERS-Software/Old_Version_Node.js/appendPaths -O /usr/local/bin/appendPaths
+ chmod +x /usr/local/bin/appendPaths
  
 %runscript
- . ~/.profile
- /usr/local/bin/bisweb/setpaths.sh
- PATH=$PATH:/usr/local/lib/nodejs/node-$version/bin
- PATH=/usr/local/lib/nodejs/node-$version/bin:$PATH
+ /usr/local/bin/appendPaths
