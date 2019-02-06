@@ -15,7 +15,7 @@ From: ubuntu:18.04
  version=v8.9.4
  distro=linux-x64
  mkdir /usr/local/lib/nodejs
- wget ${nodeLoc} -O /tmp/node-$version-$distro.tar.gz
+ wget ${nodeLoc}node-$version-$distro.tar.gz -O /tmp/node-$version-$distro.tar.gz
  tar -xvzf /tmp/node-$version-$distro.tar.gz -C /usr/local/lib/nodejs
  mv /usr/local/lib/nodejs/node-$version-$distro /usr/local/lib/nodejs/node-$version
  # apt -y install npm
