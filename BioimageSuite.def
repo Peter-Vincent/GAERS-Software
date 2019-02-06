@@ -42,4 +42,4 @@ From: ubuntu:18.04
  chmod +x /usr/local/bin/appendPaths
  
 %runscript
- /usr/local/bin/appendPaths
+ /usr/local/bin/appendPaths $version
