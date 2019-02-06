@@ -32,6 +32,7 @@ From: ubuntu:18.04
  apt-get -y install
  cp -r /tmp/bisweb-1.0.0-js-wasm-12_Dec_2018/bisweb /usr/local/bin/bisweb
  wget https://raw.githubusercontent.com/PeterVincent96/GAERS-Software/Old_Version_Node.js/bw_sliceBFC -O  /usr/local/bin/bisweb/bin/bw_sliceBFC
+ chmod +x /usr/local/bin/bisweb/bin/bw_sliceBFC
  
  rm -r /tmp/${biosuiteCMD}
  rm -r /tmp/${biosuiteGUI}
