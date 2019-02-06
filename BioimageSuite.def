@@ -40,7 +40,8 @@ From: ubuntu:18.04
 %environment
  export NODEJS_HOME=/usr/local/lib/nodejs/node-$verion/bin
  export PATH=$NODEJS_HOME:$PATH
- . ~/.profile
+ 
  
 %runscript
+ . ~/.profile
  ./usr/local/bin/bisweb/setpaths.sh
