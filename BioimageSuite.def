@@ -35,6 +35,7 @@ From: ubuntu:18.04
  
  rm -r /tmp/${biosuiteCMD}
  rm -r /tmp/${biosuiteGUI}
+ rm -r /tmp/node-$version-$distro.tar.gz
 
 %environment
  export NODEJS_HOME=/usr/local/lib/nodejs/node-$verion/bin
