@@ -37,11 +37,13 @@ From: ubuntu:18.04
  rm -r /tmp/${biosuiteGUI}
  rm -r /tmp/node-$version-$distro.tar.gz
 
-%environment
- export NODEJS_HOME=/usr/local/lib/nodejs/node-$version/bin
- export PATH=$NODEJS_HOME:$PATH
+#%environment
+# export NODEJS_HOME=/usr/local/lib/nodejs/node-$version/bin
+# export PATH=$NODEJS_HOME:$PATH
  
  
 %runscript
  . ~/.profile
  /usr/local/bin/bisweb/setpaths.sh
+ PATH=$PATH:/usr/local/lib/nodejs/node-$version/bin
+ PATH=/usr/local/lib/nodejs/node-$version/bin:$PATH
