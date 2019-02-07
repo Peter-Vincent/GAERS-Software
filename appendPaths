@@ -1,0 +1,7 @@
+#!/bin/bash
+/usr/local/bin/bisweb/setpaths.sh
+version=$1
+PATH=$PATH:/usr/local/bin/bisweb/bin
+PATH=/usr/local/bin/bisweb/bin:$PATH
+PATH=$PATH:/usr/local/lib/nodejs/node-$version/bin
+PATH=/usr/local/lib/nodejs/node-$version/bin:$PATH
