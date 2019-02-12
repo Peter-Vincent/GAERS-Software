@@ -11,6 +11,6 @@ From: ubuntu:18.04
  apt update
  apt-get -y install wget build-essential
  apt install -y python-minimal
- wget https://fsl.fmrib.ox.ac.uk/fsldownloads_registration/download/fsl=5,o_s=22,d_type=release/fslinstaller.py -O /tmp/fslinstaller.py
+ wget http://www.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py -O /tmp/fslinstaller.py
  cd /tmp/
- python fslinstaller.py
+ python fslinstaller.py -q -d
