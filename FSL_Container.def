@@ -10,7 +10,7 @@ From: ubuntu:18.04
  apt-get update
  apt update
  apt-get -y install wget build-essential
- sudo apt install python-minimal
+ apt install python-minimal
  wget https://fsl.fmrib.ox.ac.uk/fsldownloads_registration/download/fsl=5,o_s=22,d_type=release/fslinstaller.py -O ~/Downloads
  cd ~/Downloads
  python fslinstaller.py
