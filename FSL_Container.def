@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%labels
+ Maintainer Peter Vincent peter.vincent@yale.edu
+ Software FSL
+ Homepage https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/Linux
+
+%post
+ apt-get update
+ apt update
+ apt-get -y install wget build-essential
+ sudo apt install python-minimal
+ wget https://fsl.fmrib.ox.ac.uk/fsldownloads_registration/download/fsl=5,o_s=22,d_type=release/fslinstaller.py -O ~/Downloads
+ cd ~/Downloads
+ python fslinstaller.py
