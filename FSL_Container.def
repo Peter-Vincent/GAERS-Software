@@ -13,4 +13,4 @@ From: ubuntu:18.04
  apt install -y python-minimal
  wget http://www.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py -O /tmp/fslinstaller.py
  cd /tmp/
- python fslinstaller.py -q -d
+ python fslinstaller.py -q -d /usr/local
