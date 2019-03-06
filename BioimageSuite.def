@@ -39,6 +39,9 @@ From: ubuntu:18.04
  
  wget https://raw.githubusercontent.com/PeterVincent96/GAERS-Software/Old_Version_Node.js/appendPaths -O /usr/local/bin/appendPaths
  chmod +x /usr/local/bin/appendPaths
+
+%environment
+ export version
  
 %runscript
  . /usr/local/bin/appendPaths $version
