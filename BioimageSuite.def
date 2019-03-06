@@ -8,9 +8,9 @@ From: ubuntu:18.04
 
 %post
  cwd=$(pwd)
- apt-get update
  apt update
- apt-get -y install wget build-essential
+ apt -y install wget build-essential
+ apt -y install python3.6
  nodeLoc="https://nodejs.org/download/release/v8.9.4/"
  version=v8.9.4
  distro=linux-x64
@@ -18,8 +18,7 @@ From: ubuntu:18.04
  wget ${nodeLoc}node-$version-$distro.tar.gz -O /tmp/node-$version-$distro.tar.gz
  tar -xvzf /tmp/node-$version-$distro.tar.gz -C /usr/local/lib/nodejs
  mv /usr/local/lib/nodejs/node-$version-$distro /usr/local/lib/nodejs/node-$version
- # apt -y install npm
- apt-get -y install unzip
+ apt -y install unzip
  baseLoc="http://bisweb.yale.edu/binaries/"
  biosuiteCMD="bisweb-1.0.0-js-wasm-12_Dec_2018.tar.gz"
  biosuiteGUI="bisweb_linux_1.0.0_2018_12_12.zip"
@@ -27,9 +26,9 @@ From: ubuntu:18.04
  wget ${baseLoc}${biosuiteCMD} -O /tmp/${biosuiteCMD}
  wget ${baseLoc}${biosuiteGUI} -O /tmp/${biosuiteGUI}
  unzip /tmp/${biosuiteGUI}
- apt-get -y install
+ apt -y install
  tar xzf /tmp/${biosuiteCMD}
- apt-get -y install
+ apt -y install
  cp -r /tmp/bisweb-1.0.0-js-wasm-12_Dec_2018/bisweb /usr/local/bin/bisweb
  wget https://raw.githubusercontent.com/PeterVincent96/GAERS-Software/Old_Version_Node.js/bw_sliceBFC -O  /usr/local/bin/bisweb/bin/bw_sliceBFC
  chmod +x /usr/local/bin/bisweb/bin/bw_sliceBFC
